@@ -8,7 +8,7 @@
 </head>
 <body>
     @foreach($pkmns as $pkmn)
-    <p>{{$pkmn->Pokemonname}}</p>
+    <p>{{$pkmn->Pokemonname}} {{$pkmn->PokemonType}}</p>
     @endforeach
     
     <a href="create">Create a mon</a>

@@ -14,7 +14,8 @@ class SearchController extends Controller
      */
     public function index()
     {
-        $data = pokemon::all();
+        $data = pokemon::all()->random(1);
+        
         return view('search.index',['pkmns' => $data]);
     }
 
