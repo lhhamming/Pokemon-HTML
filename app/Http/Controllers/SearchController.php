@@ -19,6 +19,11 @@ class SearchController extends Controller
         return view('search.index',['pkmns' => $data]);
     }
 
+    public function catch($id)
+    {
+        $pokemon = pokemon::find(1)->first();
+        return view('search.catch')->with('Pokemon', $pokemon);
+    }
     /**
      * Show the form for creating a new resource.
      *

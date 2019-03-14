@@ -16,4 +16,6 @@ Route::get('/', function () {
 });
 
 Route::resource('search', 'SearchController');
+//Route::get('search/catch/{PokemonID}', 'SearchController@catch');
+Route::get('/catch/{id}', 'SearchController@catch');
 Route::post('AddPok', 'SearchController@store');

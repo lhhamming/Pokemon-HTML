@@ -15,7 +15,7 @@
         <select name="Type" required>
             <option value="Water">Water Type</option>
             <option value="Fire">Fire Type</option>
-            <option value="Water">Water Type</option>
+            <option value="Grass">Grass Type</option>
                 </select><br><br>
         <input class="button is-warning" type="submit" value="Zet hem in de database!">
     </form>
