@@ -13,7 +13,7 @@
     @endforeach
     <div class="Walked"></div>
     <a href="create">Create a mon</a>
-    <a href="/catch/{{$pkmn->PokemonID}}">Catch the pokemon!</a>
+    <a href="/catch/{{$pkmn->PokemonID}}">Go to the catching page!</a>
     <button onclick="location.reload();">Search for another mon</button>
 </body>
 </html>
