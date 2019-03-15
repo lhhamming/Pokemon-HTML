@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\items;
 
 class ShopController extends Controller
 {
@@ -13,7 +14,8 @@ class ShopController extends Controller
      */
     public function index()
     {
-        //
+        $buyableitems = items::all()->where('Buyable' , 1);
+        return view('shop.index', ['Items' => $buyableitems]);
     }
 
     /**
@@ -23,7 +25,7 @@ class ShopController extends Controller
      */
     public function create()
     {
-        //
+        return view('shop.create');
     }
 
     /**
@@ -34,7 +36,14 @@ class ShopController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $items = new items();
+        $items->Itemname = request('Name');
+        $items->ItemDescription = request('Desc');
+        $items->Itemprice = request('Price');
+        $items->Buyable = request('Buyable');
+
+        $items->save();
+        return redirect('/shop');
     }
 
     /**

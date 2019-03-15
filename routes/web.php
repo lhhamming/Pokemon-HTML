@@ -14,9 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
-
+//Searching for pokemons // World 
 Route::resource('search', 'SearchController');
-Route::resource('shop', 'ShopController');
 //Route::get('search/catch/{PokemonID}', 'SearchController@catch');
 Route::get('/catch/{id}', 'SearchController@catch');
 Route::post('AddPok', 'SearchController@store');
+//Shop controller
+Route::resource('shop', 'ShopController');
+Route::post('AddItem', 'ShopController@store');

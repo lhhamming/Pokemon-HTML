@@ -14,6 +14,7 @@
     <div class="Pokeballs"> <div class="remainder"></div></div>
     <button class="CatchingButton"onclick="trytoCatch();">Throw pokeball!</button>
     <div class="Result"></div>
+    <div class="OutOfBalls"></div>
 </body>
 </html>
 
@@ -28,17 +29,18 @@ $(document).ready(function(){
 function trytoCatch(){
     if(balls == 0){
         //Do nothing out of balls
+        $('div.OutOfBalls').html('<span> <a href="/shop">Buy some pokeballs!</a> <br> </span>');
     }else {
         if(Catched != true){
+            balls = balls - 1;
             var randomint = 1 + Math.floor(Math.random() * 100);
-            if(randomint > 60 && randomint < 80){
+            if(randomint > 60 && randomint < 65){
                 $('div.Result').html('<span> You catched the pokemon! <br> </span>');
                 $('button.CatchingButton').remove();
                 Catched = true;
             }
             else{
                 $('div.Result').html('<span> Get fucked <br> </span>');
-                balls = balls - 1;
                 $('div.Pokeballs').html("<span> Remaining Pokeballs: </span>" + balls);
             }
         }
