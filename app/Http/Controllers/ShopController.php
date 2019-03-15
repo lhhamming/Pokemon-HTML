@@ -40,7 +40,7 @@ class ShopController extends Controller
         $items->Itemname = request('Name');
         $items->ItemDescription = request('Desc');
         $items->Itemprice = request('Price');
-        $items->Buyable = request('Buyable');
+        $items->Buyable = (int)request('Buyable');
 
         $items->save();
         return redirect('/shop');
