@@ -15,7 +15,7 @@ class ShopController extends Controller
     public function index()
     {
         $buyableitems = items::all()->where('Buyable' , 1);
-        return view('shop.index', ['Items' => $buyableitems]);
+        return view('shop.index', ['Items' => $buyableitems])->withModel($buyableitems);
     }
 
     /**

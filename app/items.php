@@ -10,4 +10,9 @@ class items extends Model
     protected $table = 'Items';
     protected $fillable = ['Itemname','ItemDescription','Itemprice','Buyable'];
     public $timestamps = false;
+
+
+    public function findDescription($id){
+        return 'Test';
+    }
 }
