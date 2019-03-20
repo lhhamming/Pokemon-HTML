@@ -22,7 +22,6 @@ Route::post('AddPok', 'SearchController@store');
 //Shop controller
 Route::resource('shop', 'ShopController');
 Route::post('AddItem', 'ShopController@store');
-
+//Auth routes
 Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');

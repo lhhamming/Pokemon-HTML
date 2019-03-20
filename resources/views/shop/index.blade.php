@@ -1,3 +1,5 @@
+@extends('layouts.app')
+@section('content')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,8 +13,8 @@
 .ItemDescStyle{
     /*text-align: right !important;
     float: right;*/
-    margin-left:75%;
-    width: 24.8%;
+    margin-left:70%;
+    width: 25%;
     border: 1px solid #659df7;
     box-shadow: 0 0 0 2px #3f6eba;
     background-color:#0177BD;
@@ -23,7 +25,7 @@
     <p> Welcome to the shop! Look at our inventory ^^</p>
     <!--style="border-color:burlywood;border-width:2px; border-style:solid; box-shadow:black 10px;" -->
     <div align="right">
-    <table cellspacing="3" style="width:25%;border: 4px solid burlywood;box-shadow: 0 0 0 2px black;background-color:#F3FCD7;">
+    <table cellspacing="3" style="margin-right:5%;width:25%;border: 4px solid burlywood;box-shadow: 0 0 0 2px black;background-color:#F3FCD7;">
 
         @foreach ($Items as $item)
             <div>
@@ -34,13 +36,14 @@
             </div>
         @endforeach
 
-    <td >Cancel</td>
+    <td>Cancel</td>
+    <td></td>
 
     </table>
     </div>
     <br>
     <!--align="right"-->
-    <div  class="ShowItemDesc">
+    <div class="ShowItemDesc">
         
     </div>
 </body>
@@ -49,6 +52,7 @@
 
 
 <script>
+    
     var Triggerd = 0;
     var orginalText = "";
 $("td#item").hover(function(){
@@ -82,3 +86,4 @@ $("td#item").hover(function(){
     }
 })
 </script>
+@endsection

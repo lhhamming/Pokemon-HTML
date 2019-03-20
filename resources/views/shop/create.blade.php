@@ -1,3 +1,6 @@
+@extends('layouts.app')
+@section('content')
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,3 +34,5 @@ $('#price').keydown(function(e){
     }
 })
 </script>
+
+@endsection

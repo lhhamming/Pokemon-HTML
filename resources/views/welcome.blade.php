@@ -1,3 +1,5 @@
+@extends('layouts.app')
+@section('content')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +9,10 @@
     <title>Start your adventure</title>
 </head>
 <body>
+    
+    
+    You can use the Arrow keys to walk in this game.
     <a href="search/">Start!</a>
 </body>
 </html>
+@endsection
